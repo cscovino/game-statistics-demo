@@ -1,7 +1,5 @@
 FROM node:12.18.1-alpine
 
-RUN apk add git
-
 WORKDIR /app/
 
 COPY package.json .
