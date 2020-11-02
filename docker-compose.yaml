@@ -30,12 +30,12 @@ services:
     environment:
       POSTGRES_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
     restart: always
-#  web-ui:
-#    build: 
-#      context: ./game-statistics-ui
-#    ports: 
-#    - 8088:3000
-#    restart: on-failure
-#    command: node server.js
+  web-ui:
+    build: 
+      context: ./web-ui
+    ports: 
+    - 8088:3000
+    restart: on-failure
+    command: node server.js
 volumes:
   db_data:
