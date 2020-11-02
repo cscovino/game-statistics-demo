@@ -1,0 +1,28 @@
+{
+  "type": "replace_metadata",
+  "args": {
+    "version": 2,
+    "tables": [
+      {
+        "table": {
+          "schema": "public",
+          "name": "players"
+        }
+      },
+      {
+        "table": {
+          "schema": "public",
+          "name": "stats"
+        },
+        "object_relationships": [
+          {
+            "name": "player",
+            "using": {
+              "foreign_key_constraint_on": "player_id"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

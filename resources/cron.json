@@ -1,0 +1,11 @@
+{
+    "type" : "create_cron_trigger",
+    "args" : {
+        "name": "sample_cron",
+        "webhook": "http://cron-service:3000/cronjob",
+        "schedule":  "*/5 * * * *",
+        "payload": {},
+        "include_in_metadata":false,
+        "comment":"sample_cron commment"
+    }
+}
